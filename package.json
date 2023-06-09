@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/guledm12/reddit-client/issues"
   },
-  "homepage": "https://github.com/guledm12/reddit-client#readme"
+  "homepage": "https://github.com/guledm12/reddit-client#readme",
+  "devDependencies": {
+    "parcel": "^2.9.2"
+  }
 }
