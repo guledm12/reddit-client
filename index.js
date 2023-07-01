@@ -8,16 +8,19 @@ const subredditFilter = document.getElementById("subreddit-filter");
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const searchTerm = searchInput.value;
-  const subreddit = "r/" + subredditFilter.value;
-  const sortBy = document.querySelector('input[name="sortby"]:checked').value;
-  const searchLimit = document.getElementById("limit").value;
+  let searchTerm = searchInput.value;
+  // let subreddit = "r/" + subredditFilter.value;
+  let sortBy = document.querySelector('input[name="sortby"]:checked').value;
+  let searchLimit = document.getElementById("limit").value;
 
   let restrict;
+  let subreddit;
   if (subredditFilter.value != "") {
     restrict = "&restrict_sr=1"
-  } else {
+    subreddit = "r/" + subredditFilter.value;
+  } else{
     restrict = ""
+    subreddit = ""
   }
 
   console.log(restrict)
